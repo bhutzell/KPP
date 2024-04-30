@@ -1071,8 +1071,8 @@ void GenerateJacReactantProd()
 {
 int i, j, k, l, m, JVRP_NZ, newrow;
 int F_STOIC;
-int crow_JVRP[MAX_EQN], icol_JVRP[MAX_EQN*MAX_SPECIES];
-int irow_JVRP[MAX_EQN*MAX_SPECIES];
+int crow_JVRP[EqnNr], icol_JVRP[EqnNr*VarNr];
+int irow_JVRP[EqnNr*VarNr];
 
   if( VarNr == 0 ) return;
 
@@ -2106,11 +2106,11 @@ void GenerateRateLaws()
   UseFile( rateFile );
 
   NewLines(1);
-  WriteComment("Begin Rate Law Functions from KPP_HOME/util/UserRateLaws");
+  WriteComment("Begin Rate Law Functions from KPP_HOME_301/util/UserRateLaws");
   NewLines(1);
   IncludeCode( "%s/util/UserRateLaws", Home );
   NewLines(1);
-  WriteComment("End Rate Law Functions from KPP_HOME/util/UserRateLaws");
+  WriteComment("End Rate Law Functions from KPP_HOME_301/util/UserRateLaws");
   NewLines(1);
 
   NewLines(1);
@@ -2336,7 +2336,7 @@ int UTIL;
   WriteComment("End INLINED Utility Functions");
   NewLines(1);
 
-  WriteComment("Utility Functions from KPP_HOME/util/util");
+  WriteComment("Utility Functions from KPP_HOME_301/util/util");
   UTIL = DefFnc( "UTIL", 0, "Utility functions");
   CommentFunctionBegin( UTIL);
 
@@ -2346,7 +2346,7 @@ int UTIL;
     IncludeCode( "%s/util/tag2num", Home );
   }
 
-  WriteComment("End Utility Functions from KPP_HOME/util/util");
+  WriteComment("End Utility Functions from KPP_HOME_301/util/util");
   CommentFunctionEnd( UTIL );
   FreeVariable( UTIL );
 }

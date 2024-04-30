@@ -121,6 +121,8 @@ endif
 # ERROR CHECK: EXIT if we can't find libfl.* (Flex library file)
 ifeq ($(wildcard $(FLEX_LIB_DIR)/libfl.*),)
  $(error "Could not find the Flex library at $(FLEX_LIB_DIR)! Specify the path to flex in env var KPP_FLEX_LIB_DIR.")
+else
+ $(info "the Flex library at $(FLEX_LIB_DIR)".)
 endif
 
 ############################################################

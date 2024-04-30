@@ -539,7 +539,7 @@ char *p;
   
   AllocInternalArrays();
 
-  p = getenv("KPP_HOME");
+  p = getenv("KPP_HOME_301");
   if( p ) strcpy( Home, p );
 
   switch( argc ) {

@@ -1,4 +1,4 @@
 #MODEL      saprc99
-#INTEGRATOR rosenbrock
+#INTEGRATOR rosenbrock_autoreduce
 #LANGUAGE   Fortran90
 #DRIVER     general

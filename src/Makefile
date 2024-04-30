@@ -33,7 +33,7 @@
 # Load machine-specific settings for CC, CC_FLAGS etc.:
 include Makefile.defs
 
-PROG = ../bin/kpp
+PROG = ../bin/kpp_301
 
 OBJS  = \
 	code.o \
@@ -51,9 +51,9 @@ OBJS  = \
 
 .PHONY: all
 all: $(OBJS)
-	$(CC) $(CC_FLAGS) $(OBJS) -L$(FLEX_LIB_DIR) -lfl -o kpp
+	$(CC) $(CC_FLAGS) $(OBJS) -L$(FLEX_LIB_DIR) -lfl -o kpp_301
 	@mkdir -p ../bin
-	@mv kpp $(PROG)
+	@mv kpp_301 $(PROG)
 
 .PHONY: clean
 clean:  
